@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/write-order.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>填写订单填写</title>
+		<style type="text/css">
+			.order-pull ul li {background-color: transparent;}
+			.travel-item {display: inline-block;vertical-align: text-top;width: 50%;}
+			.travel-item li {border: 0;}
+			.order-pull .travel-item li {padding:0;margin: 0;}
+			.order-pull .travel-item li:nth-of-type(even) {padding: 10px 0;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href=""><img src="../images/fanhui.png" alt="" class="icon-back"></a>
+			<h1>我的订单</h1>
+		</div>
+		<div class="dt-space"></div>
+		<div class="order-info">
+			<dl>
+				<dt style="font-weight: 600;">悉尼塔，我是标题，标题你懂吗？最多两行。。。悉尼塔，我是标题，标题你懂吗？最多两行。。。</dt>
+				<dd>产品类型：套餐A</dd>
+				<dd>购买类型：成人*1 &nbsp;&nbsp;小人*2</dd>
+			</dl>
+		</div>
+		<div class="dt-space"></div>
+		<div class="order-pull">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span class="badge"><img src="../images/pull.png" alt="" data-toggle="modal" data-target="#myModa1"/></span> 观看剪羊毛的时间：剪羊毛场次二
+				</li>
+				<li class="list-group-item"> 
+				观看剪羊毛的场次：
+					<ul class="list-group travel-item">
+						<li class="list-group-item">剪羊毛场次1</li>
+						<li class="list-group-item">剪羊毛场次2</li>
+						<li class="list-group-item">剪羊毛场次3</li>
+					</ul>
+					<span class="badge"><img src="../images/pull.png" alt="" data-toggle="modal" data-target="#myModa2"/></span>
+				</li>
+				<li class="list-group-item">
+					<span class="badge"><img src="../images/pull.png" alt="" data-toggle="modal" data-target="#myModa3"/></span> 观看剪羊毛的日期：2016-06-22
+				</li>
+				<li class="list-group-item">
+					<span class="badge"><img src="../images/pull.png" alt="" data-toggle="modal" data-target="#myModa4"/></span> 接客地址：同人精华大厦10楼
+				</li>
+
+			</ul>
+		</div>
+        <div class="dt-space"></div>
+        <div class="linkman">
+        	<ul class="list-group">
+                <li class="list-group-item" style="font-weight: 600;font-size: 16px;">预订人信息 (用于接收订单反馈)</li>
+                <li class="list-group-item"><var>联系人</var><input type="text" value="王二小"/></li>
+                <li class="list-group-item"><var>手机号码</var><input type="text" value="1234567891234"/></li>
+                <li class="list-group-item"><var>邮箱</var><input type="text" value="hahahahahaha@123.com" /></li>
+            </ul>
+        </div>
+        <div class="dt-space"></div>
+        <div class="goman">
+        	<ul class="list-group">
+                <li class="list-group-item" style="font-weight: 600;font-size: 16px;"><img src="../images/goman-head.png" alt="" style="width:20px;margin-right: 5px;vertical-align: bottom;"/>王二小 (成人)</li>
+                <li class="list-group-item">主要出行人信息 (成人)<span class="badge"><img src="../images/order-sl.png" alt="" /></span></li>
+                <li class="list-group-item">出行人2 (成人)<span class="badge"><img src="../images/order-sl.png" alt="" /></span></li>
+                <li class="list-group-item">出行人3 (儿童)<span class="badge"><img src="../images/order-sl.png" alt="" /></span></li>
+            </ul>
+        </div>
+        <div class="dt-space"></div>
+        <div class="order-money">
+        	<ul class="list-group">
+                <li class="list-group-item" style="font-weight: 600;font-size: 16px;">金额</span></li>
+                <li class="list-group-item">共计金额<span class="badge total-money">$9999.00</li>
+                <li class="list-group-item">早鸟优惠<span class="badge discount">-$999.00</li>
+            </ul>
+        </div>
+        <div class="dt-space"></div>
+        <div class="cs-footer">
+			<ul style="margin-bottom: 0;">
+				<li class="total"><span>总额：</span> <var>$9000.00</var></li>
+				<li class="buy"><a href="">去提交</a></li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

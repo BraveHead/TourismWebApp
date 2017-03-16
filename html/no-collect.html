@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background-color: #fdfdfd;
+			}
+			
+			.order-nav {
+				display: flex;
+				padding-left: 0;
+				padding: 8px 0;
+				margin-bottom: 0;
+				border-bottom: 1px solid #d9d9d9;
+				max-width: 640px;
+				margin: 0 auto;
+				background-color: #fafafa;
+			}
+			
+			.order-nav li {
+				flex: 1;
+				text-align: center;
+				font-size: 18px;
+			}
+			
+			.order-nav li a {
+				padding: 3px 0;
+				color: #6d6d6d;
+			}
+			
+			.active {
+				border-bottom: 2px solid #3cd384;
+			}
+			
+			.no-cl {
+				width: 100%;
+				text-align: center;
+			}
+			
+			.no-cl img {
+				width: 1.87rem;
+				margin-top: 2.5rem;
+			}
+		</style>
+		<title>暂无收藏</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="icon-back"></a>
+			<h1>我的收藏</h1>
+		</div>
+		<ul class="order-nav">
+			<li>
+				<a href="javascript:;" class="active">商品</a>
+			</li>
+			<li>
+				<a href="javascript:;">景点</a>
+			</li>
+			<li>
+				<a href="javascript:;">攻略</a>
+			</li>
+			<li>
+				<a href="javascript:;">店铺</a>
+			</li>
+		</ul>
+		<div class="no-cl">
+			<img src="../images/no-cl.png" alt="" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			$('.order-nav li a').click(function() {
+				$('.order-nav li a ').removeClass('active');
+				$(this).addClass('active');
+			});
+		})
+	</script>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/spot-detail.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>全场搜索结果页</title>
+		<style type="text/css">
+			body {
+				max-width: 640px;
+				margin: 0 auto;
+			}
+			
+			.search {position: relative;padding: 8px 0;background-color: #fafafa;border-bottom: 1px solid #d9d9d9;text-align: center;}
+.search-icon {position: absolute;left: 1.6rem;top: 15px;z-index: 1000;}
+.search>a:first-child {position: absolute;top:15px;left:0.29rem;}
+.search>a:last-child {position: absolute;top: 17px;right: 0.29rem;}
+.search input {padding:8px 0;font-size: 14px;border-radius: 8px;border: 0;background-color: #f7f7f7;opacity: 0.9;text-indent: 30px;width:230px;background-color: #eaeaea;padding-left: 15px;}
+.search-icon img{width: 15px;}
+.search-back {width: 10px;}
+.search-click {font-size: 16px;color: #3c3c3c;vertical-align: middle;}
+@media only screen and (min-width: 350px) and (max-width: 500px) {
+	.search-icon {left:1.8rem}
+}
+@media only screen and (min-width: 500px) {
+		.search-icon {left:1.8rem}
+		.search input {width: 300px;}
+}
+@media only screen and (min-width: 640px) {
+	.search input {width:400px;padding-left: 30px;}
+
+}
+@media only screen and (min-width:540px ) {
+	.hot-search h2 , .history h2 {background-size: 0.25rem 0.31rem;}
+	.hot-search h2 , .history h2 {font-size: 0.25rem;}
+	.history h2 img {width:0.32rem}
+}
+			
+			.result-nav {
+				display: flex;
+				padding-left: 0;
+				padding: 10px 0;
+				margin-bottom: 0;
+				border: solid #cdcdcd;
+				border-width: 0px 0 1px 0;
+			}
+			
+			.result-nav li {
+				flex: 1;
+				text-align: center;
+				font-size: 18px;
+			}
+			
+			.result-nav li .active {
+				border-bottom: 2px solid #3cd384
+			}
+			
+			.result-nav li a {
+				padding: 3px 0;
+				color: #6d6d6d;
+			}
+			
+			.result-goodes {
+				padding-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+			<header class="search">
+				<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="search-back" /></a>
+				<a href="javascript:;" class="search-icon"><img src="../images/search.png" /></a>
+				<input type="text" placeholder="搜索目的地/景点/攻略等" value="产品"/>
+				<a href="javascript:;" class="search-click">搜索</a>
+			</header>
+		<ul class="result-nav">
+			<li>
+				<a href="javascript:;" class="active">商品</a>
+			</li>
+			<li>
+				<a href="javascript:;">景点</a>
+			</li>
+			<li>
+				<a href="javascript:;">攻略</a>
+			</li>
+		</ul>
+		<div class="result-goodes">
+			<div class="media-content" id="media-content">
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="" class="media-left my-media-left">
+							<img src="../images/xq_xg1.png" alt="" class="small-img">
+							<var class="marker">多日游</var>
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading my-heading">澳洲游乐场真的是个充满神奇的地方，我喜欢我喜欢，澳洲游乐场真的是个充满神奇的地方，我喜欢我喜欢澳洲游乐场真的是个充满神奇的地方，我喜欢我喜欢澳洲游乐场真的是个充满神奇的地方，我喜欢我喜欢</h4>
+								<div class="related">
+									<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+									<span class="discount">8.8折</span>
+									<p class="mes clearfix"><span class="saled">已售112</span><span class="money">$1880.00</span></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="javascript:;" class="media-left my-media-left">
+							<img src="../images/xq_xg1.png" alt="" class="small-img">
+							<var class="marker">旅游景点</var>
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading my-heading">澳洲游乐场</h4>
+								<div class="related">
+									<!--<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>-->
+									<span class="discount">8.8折</span>
+									<p class="mes clearfix"><span class="saled">已售112</span><span class="money">$1880.00</span></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="" class="media-left my-media-left">
+							<img src="../images/bulb.png" alt="" />
+							<var class="marker">多日游</var>
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading my-heading">澳洲游乐场真的是个充满神奇的地方</h4>
+								<div class="related">
+									<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+									<span class="discount">8.8折</span>
+									<p class="mes clearfix"><span class="saled">已售112</span><span class="money">$1880.00</span></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-back"><img src="../images/top-back.png" alt="" /></div>
+	</body>
+	<script src="../js/back-top.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.result-nav li a').click(function() {
+				console.log("a")
+				$(this).addClass('active').parent().siblings().children().removeClass('active');
+			})
+		})
+	</script>
+
+</html>

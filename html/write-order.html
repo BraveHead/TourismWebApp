@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/write-order.css" />
+		<link rel="stylesheet" href="../css/mobiscroll.css" />
+		<link rel="stylesheet" href="../css/mobiscroll_002.css" />
+		<link rel="stylesheet" href="../css/mobiscroll_003.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>订单填写</title>
+		<style type="text/css">
+			@media only screen and (min-width: 640px) {
+				.dw,
+				.dwbg {
+					left: 191px !important;
+				}
+			}
+			
+			.dw {
+				-webkit-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				transition: top 0.15s ease-in;
+				-webkit-transition: top 0.15s ease-in;
+			}
+			
+			.sel-date {
+				width: 100%;
+				padding: 0;
+				text-align: left;
+				text-indent: 60px;
+				font-style: normal;
+				height: 40px;
+				line-height: 40px;
+			}
+			.dw {position: fixed !important;top: 50% !important;left: 50% !important;margin: -230px -130px !important;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href=""><img src="../images/fanhui.png" alt="" class="icon-back" /></a>
+			<h1>我的订单</h1>
+		</div>
+		<div class="dt-space"></div>
+		<div class="order-info">
+			<dl>
+				<dt style="font-weight: 600;">悉尼塔，我是标题，标题你懂吗？最多两行。。。悉尼塔</dt>
+				<dd>产品类型：套餐A</dd>
+				<dd>购买类型：成人*1 &nbsp;&nbsp;小人*2</dd>
+			</dl>
+		</div>
+		<div class="dt-space"></div>
+		<form action="https://www.baidu.com/" method="post" enctype="multipart/form-data">
+			<div class="order-pull">
+				<ul class="list-group pull-list">
+					<li class="list-group-item radio-pull switch-color" data-id='1'>
+						<var>单选类下拉</var><i class="sel-val"></i><span class="badge"><img src="../images/pull.png" alt="下拉按钮"/></span>
+					</li>
+					<li class="list-group-item radio-pull switch-color" data-id='2'>
+						<var>单选类下拉</var><i class="sel-val"></i><span class="badge"><img src="../images/pull.png" alt="下拉按钮"/></span>
+					</li>
+					<li class="list-group-item con-wri" data-id='1'>
+						<var>填写</var>
+						<i class="sel-val"></i>
+						<span class="badge"><img src="../images/pull.png" alt="下拉按钮"></span>
+					</li>
+					<li class="list-group-item con-wri" data-id='2'>
+						<var>填写</var>
+						<i class="sel-val"></i>
+						<span class="badge"><img src="../images/pull.png" alt="下拉按钮"></span>
+					</li>
+					<li class="list-group-item checkbox-pull switch-color" data-id="1">
+						<var>多选类下拉</var><i class="sel-val"></i><span class="badge"><img src="../images/pull.png" alt="下拉按钮"/></span>
+					</li>
+					<li class="list-group-item checkbox-pull switch-color" data-id="2">
+						<var>多选类下拉</var><i class="sel-val"></i><span class="badge"><img src="../images/pull.png" alt="下拉按钮"/></span>
+					</li>
+					<li class="list-group-item radio-pull switch-color">
+						<var>时间时间</var><input type="text" name="aa" id="appDate" class="sel-val" placeholder="请选择出生年月"><span class="badge"><img src="../images/pull.png" alt="下拉按钮"/></span>
+					</li>
+
+				</ul>
+			</div>
+			<div class="dt-space"></div>
+			<div class="linkman">
+				<ul class="list-group">
+					<li class="list-group-item" style="font-weight: 600;font-size: 16px;">预订人信息 (用于接收订单反馈)</li>
+					<li class="list-group-item"><var>联系人</var><input type="text" placeholder="预订人姓名" class="booking" /></li>
+					<li class="list-group-item"><var>手机号码</var><input type="number" placeholder="手机号码" class="tele-number" />
+						<!--<div style="color: red;display: none;" class="num-alert">请输入正确的手机号码</div>-->
+					</li>
+					<li class="list-group-item"><var>邮箱</var><input type="text" placeholder="邮箱" class="user-email" />
+						<!--<div style="color: red;display: none;" class="email-alert">请输入正确的邮箱</div>-->
+					</li>
+				</ul>
+			</div>
+			<div class="dt-space"></div>
+			<div class="goman">
+				<ul class="list-group">
+					<li class="list-group-item" id="traveller" style="font-weight: 600;font-size: 16px;">出行人信息</li>
+					<li class="list-group-item" style="position: relative;">
+						<a href="javascript:;"><input type="text" placeholder="主要出行人信息 (成人)" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span>
+							<!--<div style="position: absolute;width: 170px;height: 40px;background-color: transparent;top: 0;left: 0;"></div>-->
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="traveller-info-write.html"><input type="text" placeholder="出行人2 (成人)" readonly="readonly" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span></a>
+					</li>
+					<li class="list-group-item">
+						<a href="traveller-info-write.html"><input type="text" placeholder="出行人2 (成人)" readonly="readonly" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span></a>
+					</li>
+					<li class="list-group-item">
+						<a href="traveller-info-write.html"><input type="text" placeholder="出行人2 (成人)" readonly="readonly" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span></a>
+					</li>
+					<li class="list-group-item">
+						<a href="traveller-info-write.html"><input type="text" placeholder="出行人2 (成人)" readonly="readonly" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span></a>
+					</li>
+					<li class="list-group-item">
+						<a href="traveller-info-write.html"><input type="text" placeholder="出行人3 (儿童)" readonly="readonly" /><span class="badge"><img src="../images/order-sl.png" alt="" /></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="dt-space"></div>
+			<div class="order-money">
+				<ul class="list-group">
+					<li class="list-group-item" style="font-weight: 600;font-size: 16px;">金额</span>
+					</li>
+					<li class="list-group-item">共计金额<span class="badge total-money">$9.0</li>
+	                <li class="list-group-item">早鸟优惠<span class="badge discount">-$999.00</li>
+	            </ul>
+	        </div>
+	        <div class="dt-space" style="margin-bottom: 47px;"></div>
+	        <div class="cs-footer navbar-fixed-bottom">
+				<ul style="margin-bottom: 0;">
+					<li class="total" style="position: relative;"><span>总额：</span> <var>$<input type="text" readonly="readonly" value="90.00" class="price-total" unselectable="on"/></var>
+						<div style="position: absolute;width: 100px;height: 40px;background-color: transparent;left: 50px;top: 0;"></div>
+					</li>
+					<li class="buy">
+						<button>去提交</button>
+					</li>
+				</ul>
+
+			</div>
+		</form>
+		<!--模态框-->
+		<!-- Modal -->
+		<!--外层弹框-->
+		<div class="dialogBg">
+			<div class="dialog"></div>
+		</div>
+		<!--单选类弹框-->
+		<div id="modal-radio-1">
+			<div class="radio-con-1">
+				<input type="radio" name="radio-1" id="radio1" checked="checked" /><label for="radio1">剪羊毛</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-1" id="radio2" /><label for="radio2">剪羊毛场次2</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-1" id="radio3" /><label for="radio3">剪羊毛场次3</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-1" id="radio4" /><label for="radio4">剪羊毛场次3</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-1" id="radio5" /><label for="radio5">剪羊毛场次3</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-1" id="radio6" /><label for="radio6">剪羊毛场次3</label>
+			</div>
+			<div class="radio-footer-1">
+				<ul>
+					<li class="radio-footer-con-1">确定</li>
+					<li class="radio-footer-can-1">取消</li>
+				</ul>
+			</div>
+		</div>
+		<div id="modal-radio-2">
+			<div class="radio-con-2">
+				<input type="radio" name="radio-2" id="radio7" checked="checked" /><label for="radio7">剪羊毛ff</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-2" id="radio8" /><label for="radio8">剪羊毛场次2ff</label>
+				<div class="gap"></div>
+				<input type="radio" name="radio-2" id="radio9" /><label for="radio9">剪羊毛场次3ff</label>
+			</div>
+			<div class="radio-footer-2">
+				<ul>
+					<li class="radio-footer-con-2">确定gg</li>
+					<li class="radio-footer-can-2">取消gg</li>
+				</ul>
+			</div>
+		</div>
+		<!--多选类弹框-->
+		<div id="modal-checkbox-1">
+			<div class="checkbox-con-1">
+				<input type="checkbox" name="checkbox-1" id="checkbox-1" value="" checked="checked" /><label for="checkbox-1">剪羊毛场次1</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-2" value="" /><label for="checkbox-2">剪羊毛场次2</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-3" value="" /><label for="checkbox-3">剪羊毛场次3</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-4" value="" /><label for="checkbox-4">剪羊毛场次4</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-5" value="" /><label for="checkbox-5">剪羊毛场次5</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-6" value="" /><label for="checkbox-6">剪羊毛场次5</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-7" value="" /><label for="checkbox-7">剪羊毛场次5</label>
+			</div>
+			<div class="checkbox-footer-1">
+				<ul>
+					<li class="checkbox-footer-con-1">确定</li>
+					<li class="checkbox-footer-can-1">取消</li>
+				</ul>
+			</div>
+		</div>
+		<div id="modal-checkbox-2">
+			<div class="checkbox-con-2">
+				<input type="checkbox" name="checkbox-1" id="checkbox-8" value="" checked="checked" /><label for="checkbox-8">剪羊毛场次ggg1</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-9" value="" /><label for="checkbox-9">剪羊毛场次hhh2</label>
+
+			</div>
+			<div class="checkbox-footer-2">
+				<ul>
+					<li class="checkbox-footer-con-2">确定</li>
+					<li class="checkbox-footer-can-2">取消</li>
+				</ul>
+			</div>
+		</div>
+		<!--内容填写-->
+		<div id="modal-write-1">
+			<div class="modal-write-1">
+				<h4>请填写接客地址</h4>
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="write-footer-1">
+				<ul>
+					<li class="write-footer-can-1">取消</li>
+					<li class="write-footer-con-1">确定</li>
+				</ul>
+			</div>
+		</div>
+		<div id="modal-write-2">
+			<div class="modal-write-2">
+				<h4>填写填写</h4>
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="write-footer-2">
+				<ul>
+					<li class="write-footer-can-2">取消</li>
+					<li class="write-footer-con-2">确定</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sel-alert"></div>
+	</body>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_002.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_004.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_003.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_005.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var w, h, className;
+		w = $(window).width();
+		h = $('body').height();
+		$('.dialogBg').css('height', h);
+		var alertW = $('.modal-body').outerWidth(true);
+		var alertH = $('.modal-body').outerHeight(true) + 52;
+		var alertL = (w - alertW) / 2;
+		var alertT = (h - alertH) / 2;
+		$(function() {
+			//			阻止浏览器默认行为
+			function preventDefaultFn(event) {
+				event.preventDefault();
+			}
+			var index;
+            var dataId;
+			//			单选弹框
+			$(".radio-pull").click(function() {
+				dataId =$(this).attr('data-id')
+				index = $(this).index();
+				var selText1 = "";
+				$('.dialogBg').fadeIn(100,function(){
+					$('#modal-radio-'+dataId).removeAttr('class').fadeIn();
+				});
+				$('body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});
+				$('body').on('touchmove', preventDefaultFn);
+				selText1 = $('#modal-radio-'+dataId).find('input[type=radio]:checked').next().text();
+				$('.radio-con-'+dataId).find('input').click(function() {
+					selText1 = $('#modal-radio-'+dataId).find('input[type=radio]:checked').next().text();
+				});
+				$('.radio-footer-con-'+dataId).click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('#modal-radio-'+dataId).fadeOut();
+						$('.sel-val').eq(index).html(selText1);
+						$('.order-pull li').eq(index).css('background-color', '#fff');
+						$('body').removeAttr('style');
+						$('body').off('touchmove', preventDefaultFn);
+					})
+				});
+				$('.radio-footer-can-'+dataId).click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('body').removeAttr('style');
+						$('body').off('touchmove', preventDefaultFn);
+						$('#modal-radio-'+dataId).fadeOut();
+					})
+				})
+
+			})
+				//			多选弹框
+			$('.checkbox-pull').click(function() {
+				dataId =$(this).attr('data-id');
+				index = $(this).index();
+				$('.dialogBg').fadeIn(100,function(){
+					$('#modal-checkbox-'+dataId).fadeIn();
+				});
+				$('body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});
+				$('body').on('touchmove', preventDefaultFn);
+
+				$('.checkbox-con-'+dataId).find('input').click(function() {
+					var selText2 = "";
+					$('#modal-checkbox-'+dataId).find('input[type=checkbox]:checked').each(function() {
+						selText2 += $(this).next().text() + ", ";
+					});
+					$('.checkbox-footer-con-'+dataId).click(function() {
+						$('.dialogBg').fadeOut(100, function() {
+							$('.sel-val').eq(index).text(selText2.substring(0, selText2.length - 2));
+						})
+					});
+				})
+
+				$('.checkbox-footer-con-'+dataId).click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('#modal-checkbox-'+dataId).fadeOut();
+						$('.sel-val').eq(index).html($('.checkbox-con-'+dataId).find('input[type=checkbox]:checked').next().text());
+						$('.order-pull li').eq(index).css('background-color', '#fff');
+						$('body').removeAttr('style');
+						$('body').off('touchmove', preventDefaultFn);
+					})
+				})
+				$('.checkbox-footer-can-'+dataId).click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('body').removeAttr('style');
+						$('body').off('touchmove', preventDefaultFn);
+						$('#modal-checkbox-'+dataId).fadeOut();
+					})
+				})
+
+			})
+
+			//			填写内容
+			$('.con-wri').click(function() {
+				index = $(this).index();
+				dataId = $(this).attr('data-id');
+				var selText3 = "";
+				$('.dialogBg').fadeIn(200); //显示弹框
+				$('body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});
+				$('body').on('touchmove', preventDefaultFn);
+				$('#modal-write-'+dataId).removeAttr('class').addClass('bounceIn').fadeIn();
+				$('.write-footer-con-'+dataId).click(function() {
+					selText3 = $('.modal-write-'+dataId).find('textarea').val();
+					if(selText3 == "") {
+						$('.dialogBg').css('display', 'block');
+					} else {
+						$('.dialogBg').fadeOut(100, function() {
+							$('#modal-write-'+dataId).addClass('bounceOutUp').fadeOut();
+							$('.sel-val').eq(index).text(selText3);
+							$('.order-pull li').eq(index).css('background-color', '#fff');
+							$('body').removeAttr('style');
+							$('body').off('touchmove', preventDefaultFn);
+						})
+					}
+				});
+				$('.write-footer-can-'+dataId).click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('body').removeAttr('style');
+						$('body').off('touchmove', preventDefaultFn);
+						$('#modal-write-'+dataId).addClass('bounceOutUp').fadeOut();
+					})
+				})
+			})
+
+var currYear = (new Date()).getFullYear();
+			var opt = {};
+			opt.date = {
+				preset: 'date'
+			};
+			opt.datetime = {
+				preset: 'datetime'
+			};
+			opt.time = {
+				preset: 'time'
+			};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+				display: 'modal', //显示方式
+				mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+				startYear: currYear - 20, //开始年份
+				endYear: currYear + 10, //结束年份
+				closeOnSelect:true,
+//				onMarkupReady:resetPosition,
+			};
+
+
+			$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+//						function resetPosition(html,inst){
+//				console.log($('.dw').length);
+//				$('.dw').css({'position':'fixed','top':'50%','left':'50%','margin':'-130px'})
+//              $('.dwo').css('background','red');
+//			}
+		})
+	</script>
+	<script type="text/javascript">
+		//				验证手机号码是否合理
+		function numberTest() {
+			var numberValue = $.trim($('.tele-number').val());
+			var numRe = /^1\d{10}$/;
+			if(!numRe.test(numberValue)) {
+				alert('请输入正确的手机号');
+
+				$(this).focus();
+			}
+
+		}
+
+		function emailTest() {
+			var emailValue = $.trim($('.user-email').val());
+			var emailRe = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+			if(!emailRe.test(emailValue)) {
+				alert('请输入正确的邮箱');
+
+				$(this).focus();
+			}
+
+		}
+		//	提示用户输入相关信息
+		$(function() {
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+//			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
+
+			$('.linkman input').focus(function() {
+				console.log('sss');
+				if(!isAndroid) {
+					console.log('seee')
+						//  如果不是安卓，那就调整定位
+					$('.sel-alert').css({
+						'position': 'absolute',
+						'top': 'initial',
+						'bottom': '-1.45rem'
+					})
+				}
+			})
+			$('.linkman input').blur(function() {
+				console.log('sssdd');
+				if(!isAndroid) {
+					console.log('seee')
+						//  如果不是安卓，那就调整定位
+					$('.sel-alert').css({
+						'position': 'fixed',
+						'top': '0',
+						'bottom': '0'
+					})
+				}
+			})
+				//			$('.tele-number').change(function(){
+				//				numberTest();
+				//
+				//			})
+				//			$('.user-email').change(function(){
+				//				emailTest();
+				//			})
+
+			$("form").submit(function(e) {
+
+				e.preventDefault();
+				var timer;
+				clearTimeout(timer);
+
+				var selectLength = $('.order-pull i').length;
+				var arr1 = [];
+				for(var j = 0; j < selectLength; j++) {
+					if($('.order-pull i').eq(j).text() == "") {
+						arr1.push(j);
+					}
+				}
+				if(arr1.length > 0) {
+					e.preventDefault();
+					var selContent = $('.pull-list li').eq(arr1[0]).find('var').text();
+					$('.sel-alert').text("请选择" + selContent);
+					var alertL = $(window).width() - $('.sel-alert').width();
+					var alertT = $(window).height() - $('.sel-alert').height();
+					// $('.sel-alert').css({
+					// 	'left': alertL / 2,
+					// 	'top': alertT / 2
+					// });
+					//
+
+					$('.sel-alert').fadeIn(100, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(100)
+						}, 3000)
+					})
+					return false;
+				}
+
+				if($('#appDate').length > 0 && $('#appDate').val().length == "0") {
+					e.preventDefault();
+					var dateContent = $('#appDate').parent().find('var').text();
+					$('.sel-alert').text("请选择" + dateContent);
+					var alertL = $(window).width() - $('.sel-alert').width();
+					var alertT = $(window).height() - $('.sel-alert').height();
+//					$('.sel-alert').css({
+//						'left': alertL / 2,
+//						'top': alertT / 2
+//					});
+					$('.sel-alert').fadeIn(100, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(100)
+						}, 3000)
+					})
+					return false;
+				}
+
+				var arrInfo = [];
+				for(var j = 0; j < $('.linkman input').length; j++) {
+					console.log('sss');
+					if($('.linkman input').eq(j).val() == "") {
+						arrInfo.push(j);
+					}
+				}
+				if(arr1.length == 0 && arrInfo.length > 0) {
+					e.preventDefault();
+					var bookContent = $('.linkman input').eq(arrInfo[0]).attr('placeholder');
+					$('.sel-alert').text("请填写" + bookContent);
+//					var alertL = $(window).width() - $('.sel-alert').width();
+//					var alertT = $(window).height() - $('.sel-alert').height();
+//					$('.sel-alert').css({
+//						'left': alertL / 2,
+//						'top': alertT / 2
+//					});
+					$('.sel-alert').fadeIn(100, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(100)
+						}, 3000)
+					})
+					return false;
+				}
+				//				预订人信息验证
+				var bookingName = $.trim($('.booking').val());
+				var nameRe = /^[a-zA-Z]+$/;
+				var emailValue = $.trim($('.user-email').val());
+				var emailRe = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+				if(!nameRe.test(bookingName)){
+					$('.sel-alert').text("请输入英文名");
+					$('.sel-alert').fadeIn(100, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(100)
+						}, 3000)
+					})
+					$('.booking').focus();
+					return false;
+				}else{
+					$('.booking').blur();
+				}
+				if(!emailRe.test(emailValue)) {
+					$('.sel-alert').text("请输入有效的邮箱");
+					$('.sel-alert').fadeIn(100, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(100)
+						}, 3000)
+					})
+					$('.user-email').focus();
+					return false;
+				} else {
+					$('.user-email').blur();
+				}
+
+				//出行人信息判断
+				var infoLength = $('.goman input').length;
+				var arr2 = [];
+				for(var i = 0; i < infoLength; i++) {
+					if($('.goman input').eq(i).val() == "") {
+						arr2.push(i);
+					}
+				}
+				if($('#appDate').length > 0) {
+					if(arr1.length == 0 && $('#appDate').val().length != "0" && arr2.length > 0) {
+						e.preventDefault();
+						var infoContent = $('.goman input').eq(arr2[0]).attr('placeholder');
+						$('.sel-alert').text("请填写" + infoContent);
+//						var alertL = $(window).width() - $('.sel-alert').width();
+//						var alertT = $(window).height() - $('.sel-alert').height();
+//						$('.sel-alert').css({
+//							'left': alertL / 2,
+//							'top': alertT / 2
+//						});
+						$('.sel-alert').fadeIn(100, function() {
+							timer = setTimeout(function() {
+								$('.sel-alert').fadeOut(100)
+							}, 3000)
+						})
+					}
+				} else {
+					if(arr1.length == 0 && arrInfo == 0 && arr2.length > 0) {
+						e.preventDefault();
+						var infoContent = $('.goman input').eq(arr2[0]).attr('placeholder');
+						$('.sel-alert').text("请填写" + infoContent);
+//						var alertL = $(window).width() - $('.sel-alert').width();
+//						var alertT = $(window).height() - $('.sel-alert').height();
+//						$('.sel-alert').css({
+//							'left': alertL / 2,
+//							'top': alertT / 2
+//						});
+						$('.sel-alert').fadeIn(100, function() {
+							timer = setTimeout(function() {
+								$('.sel-alert').fadeOut(100)
+							}, 3000)
+						})
+					}
+				}
+
+			})
+
+		})
+	</script>
+
+</html>

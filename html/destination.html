@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/search.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>景点列表页</title>
+		<style type="text/css">
+.pl-header , .des-content {max-width: 640px;margin: 0 auto;}
+.pl-title .pl-back {width:10px;}
+.pl-header {background-color: #fafafa;}
+.pl-title>a {position: absolute;top:15px}
+.pl-title>a:first-child {left: 0;}
+.pl-title>a:last-child {right: 0;}
+.pl-title h1 {display: inline-block;font-size: 20px;vertical-align: middle;font-weight: bold;width:4.5rem;margin: 0;line-height: 52px;}
+.pl-title .pl-search {width:20px;}
+.pl-title {position: relative;text-align: center;width:93%;margin: 0 auto;height: 52px;}
+.des-left {padding: 0;}
+.des-left li {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.city-wp {padding-left: 0;}
+.des-content {margin-top: 53px;}
+.des-row {padding: 0;}
+.city-wp {background-color: #ebebeb;}
+.city-wp li {border-bottom: 1px solid #d7d7d7;height: 0.9rem;/*line-height: 41px;*/font-size: 0.26rem;font-weight: 600;}
+.bulk {width: 0.1rem;height: 0.88rem; background-color: #0cd084;vertical-align: middle;display: inline-block;margin-right: 0.2rem;visibility: hidden;}
+.des-right-part {padding: 5px;}
+.des-scan {font-size: 0.26rem;margin: 0;}
+.des-thumnail {border: 0;padding: 0;margin-bottom: 0;}
+.des-caption {text-align: center;}
+.thumnail-row {padding: 5px;}
+@media only screen and (min-width: 540px) {
+	.city-wp li {height: 0.8rem;line-height: 0.8rem;font-size: 0.2rem;}
+	.bulk {margin-right: 0.25rem;height: 0.8rem;}
+	.des-right-part {padding: 10px;padding-bottom: 0;}
+	.des-scan {font-size: 0.22rem;}
+}
+		</style>
+	</head>
+	<body>
+		<!--景点页-->
+		<div class="guiding">
+			<div class="pl-header navbar-fixed-top">
+				<div class="pl-title">
+					<a href="javascript:;"><img src="../images/fanhui.png" class="pl-back" /></a>
+					<h1>目的地</h1>
+					<a href="javacript:;"><img src="../images/search.png" class="pl-search" /></a>
+				</div>
+			</div>
+			<div class="des-content">
+				<div class="container-fluid">
+					<div class="row des-row">
+						<div class="col-xs-3 des-left">
+						 <ul class="city-wp">
+						 	<li style="color: #0cd084;background-color: #fdfdfd;"><span class="bulk" style="visibility: visible;"></span>昆士兰州</li>
+						 	<li><span class="bulk"></span>新南威尔士新南威尔士</li>
+						 	<li><span class="bulk"></span>新南威尔士</li>
+						 	<li><span class="bulk"></span>南澳大利亚</li>
+						 	<li><span class="bulk"></span>南澳大利亚</li>
+						 </ul>	
+						</div>
+						<div class="col-xs-9 des-right">
+							<div class="row thumnail-row">
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<a href="javascript:;">
+											<img src="../images/des-sp.png" alt="" />
+											<div class="caption des-caption">
+												<h3 class="des-scan">凯恩斯</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<a href="javascript:;">
+											<img src="../images/des-sp.png" alt="" />
+											<div class="caption des-caption">
+												<h3 class="des-scan">凯恩斯</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--选择城市切换相应景点-->
+						<div class="col-xs-9 des-right" style="display: none;">
+							<div class="row thumnail-row">
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<a href="javascript:;">
+											<img src="../images/des-sp.png" alt="" />
+											<div class="caption des-caption">
+												<h3 class="des-scan">凯恩斯2</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<a href="javascript:;">
+											<img src="../images/des-sp.png" alt="" />
+											<div class="caption des-caption">
+												<h3 class="des-scan">凯恩斯2</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯2</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 des-right-part">
+									<div class="thumbnail des-thumnail">
+										<img src="../images/des-sp.png" alt="" />
+										<div class="caption des-caption">
+											<h3 class="des-scan">凯恩斯</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--搜索页-->
+		<div class="search-page">
+			<header class="search">
+				<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="search-back" /></a>
+				<a href="javascript:;" class="search-icon"><img src="../images/search.png" /></a>
+				<input type="text" placeholder="搜索目的地/景点/攻略等" class="search-keyword" autofocus/>
+				<a href="javascript:;" class="search-click">搜索</a>
+			</header>
+			<div class="hot-search">
+				<h2>热门搜索</h2>
+				<div class="hot-info">
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里</a>
+					<a href="javascript:;" class="btn btn-default">化妆品</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+				</div>
+			</div>
+			<div class="history">
+				<h2>历史搜索<img src="../images/clear.png" alt="" /></h2>
+				<div class="history-info">
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">化妆品<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+//			城市列表的高为窗口的高
+			var cityWpH=$(window).height();
+			$('.city-wp').css('height',cityWpH);
+//			选择城市切换相应目的地
+			$('.city-wp li').each(function(Index , Element){
+				$(Element).click(function(e){
+					e.stopPropagation();
+					$('.bulk').css('visibility','hidden');
+					$(this).find('span').css('visibility','visible');
+					$('.city-wp li').css({
+						"color": "#333",
+						"background-color": "#ebebeb"
+					});
+					$(this).css({
+						"color": "#0cd084",
+						"background-color": "#fdfdfd"
+					});
+                $('.des-right').css('display','none');					
+				$('.des-right').eq(Index).css('display','block');
+				})
+
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,10 @@
+/*返回顶部按钮*/
+.top-back {display: none;}
+.top-back>img {width: 40px;position: fixed;bottom: 70px;right: 15px;z-index: 1000;}
+/*a标签去除bs样式*/3   
+a:hover , a:focus , a:active {text-decoration: none;outline: 0;}
+.header {height:52px;position:relative;text-align: center;border-bottom: 1px solid #d9d9d9;background-color: #fafafa;max-width: 640px;margin: 0 auto;}
+.header>a {position: absolute;top:15px;left: 0.29rem;}
+.icon-back {width: 10px;}
+.header>h1 {display: inline-block;font-size: 20px;font-weight: bold;vertical-align: middle;width: 5.2rem;line-height: 52px;margin: 0;}
+.dt-space {width: 100%;height: 0.19rem;background-color: #f1f1f1;border-top:1px solid #cdcdcd;border-bottom: 1px solid #cdcdcd;}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/strategy.css" />
+		<link rel="stylesheet" href="../css/search.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.media-content {
+				max-width: 640px;
+				margin: 120px auto 0;
+			}
+			
+			.media-item {
+				border-bottom: 1px solid #cdcdcd;
+				padding-top: 15px;
+			}
+			
+			.media-content .media-item:first-child {
+				padding-top: 0;
+			}
+			
+			.pl-info {
+				position: absolute;
+				width: 93%;
+				bottom: 0;
+			}
+			
+			.pl-info p {
+				margin: 0;
+			}
+			
+			.pl-info big {
+				float: right;
+			}
+			
+			.pl-info var {
+				font-size: 12px;
+			}
+			
+			.sp-heading {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				font-size: 15px;
+				line-height: 20px;
+			}
+			
+			.destination {
+				background-color: #fdfdfd;
+				padding: 0;
+				position: absolute;
+				width: 100%;
+			}
+			
+			.destination ul {
+				float: left;
+				padding: 0;
+				margin-bottom: 0px;
+			}
+			
+			.destination ul li {
+				border-bottom: 1px solid #d7d7d7;
+				height: 42px;
+				/*line-height: 41px;*/
+				font-weight: 600;
+			}
+			
+			.city-wp li {
+				padding: 0;
+			}
+			
+			.city-list li {
+				line-height: 41px;
+			}
+			
+			.destination .city-wp {
+				width: 28.8%;
+				background-color: #ebebeb;
+			}
+			
+			.destination .city-list {
+				width: 64.6%;
+			}
+			.city-list li var {font-weight: 600;}
+			
+			.destination .city-list li {
+				/*border-left: 1px solid #d7d7d7;*/
+				text-indent: 10px;
+				padding: 0;
+			}
+			
+			.sel-spots {
+				background: url(../images/duihao.png) no-repeat;
+				background-size: 18px;
+				background-position: 3.8rem;
+				font-weight: 600;
+				color: #0cd088;
+			}
+			
+			.destination .kong {
+				width: 6.2%
+			}
+			
+			.destination ul li:last-child {
+				/*border: 0;*/
+			}
+			
+			.bulk {
+				width: 5px;
+				height: 41px;
+				background-color: #0cd084;
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: 0.36rem;
+				visibility: hidden;
+			}
+			@media only screen and (min-width: 540px) {
+				.sp-heading {font-size: 20px;line-height: 25px;}
+			}
+		</style>
+		<title>景点列表目的地下拉</title>
+	</head>
+
+	<body>
+		<div class="guiding">
+			<div class="pl-header navbar-fixed-top">
+				<div class="pl-title">
+					<a href="javascript:;"><img src="../images/fanhui.png" class="pl-back" /></a>
+					<h1>布里斯班景点</h1>
+					<a href="javascript:;"><img src="../images/search.png" class="pl-search" /></a>
+				</div>
+				<ul class="st-type">
+					<li class="tripe-style-wp">目的地<img src="../images/select-ico1.png" alt="" /></li>
+	
+					<li class="tripe-style-wp">筛选<img src="../images/select-ico2.png" alt="" /></li>
+					<li class="tripe-style-wp">排序方式<img src="../images/select-ico2.png" alt="" /></li>
+				</ul>
+	
+			</div>
+			<div class="media-content">
+				<div class="media-item">
+					<div class="media my-media">
+						<a class="media-left my-media-left" href="javascript:;">
+							<img src="../images/xq_xg1.png" alt="" class="small-img" />
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading sp-heading">景点标题</h4>
+								<div class="pl-info">
+									<p>醉清风&nbsp去过</p>
+									<var>游乐场</var>&nbsp<var>游乐场</var>&nbsp<var>免费</var><big>4km
+		    	</big>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a class="media-left my-media-left" href="#">
+							<img src="../images/xq_xg1.png" alt="" class="small-img" />
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading sp-heading">我是景点标题哈,我是景点标题哈,我是景点标题哈,我是景点标题哈我是景点标题哈,我是景点标题哈,我是景点标题哈,我是景点标题哈</h4>
+								<div class="pl-info">
+									
+									<var>游乐场</var>&nbsp<var>游乐场</var>&nbsp<var>免费</var><big>4km
+			    	</big>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a class="media-left my-media-left" href="#">
+							<img src="../images/xq_xg1.png" alt="" class="small-img" />
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading sp-heading">我是景点标题哈,我是景点标题哈,我是景点标题哈,我是景点标题哈我是景点标题哈,我是景点标题哈,我是景点标题哈,我是景点标题哈</h4>
+								<div class="pl-info">
+									<p>醉清风&nbsp去过</p>
+									<big>4km
+			    	</big>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul id="pagination" style="display:none;">
+				<li>
+					<!--<a href="/travel_v3/public/wap_html/html/more-spot.html">1</a>-->
+				</li>
+				<li class="next">
+					<a href="/travel_v3/public/wap_html/html/more-spot.html">2</a><!--下一页的超链接-->
+				</li>
+			</ul>			
+        </div>
+        <!--弹框列表-->
+		<div class="st-alert">
+			<div class="destination clearfix">
+				<ul class="city-wp clearfix">
+					<li style="color: #0CD084;background-color: #fdfdfd;"><span class="bulk" style="visibility: visible;"></span>昆士兰州</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+				</ul>
+				<ul class="kong"></ul>
+				<ul class="city-list clearfix">
+					<a href="javascript:;"><li class="sel-spots">布里斯班</li></a>
+					<a href="javascript:;"><li>凯恩斯</li></a>
+					<a href="javascript:;"><li>图文巴</li></a>
+					<a href="javascript:;"><li>布里斯班</li></a>
+					<a href="javascript:;"><li>图文吧</li></a>
+					<a href="javascript:;"><li>布里斯班</li></a>
+					<a href="javascript:;"><li>布里斯班</li></a>
+				</ul>
+				<!--选择城市切换相应城市景点-->
+				<ul class="city-list clearfix" style="display: none;">
+					<li class="sel-spots">凯恩斯</li>
+					<li>凯恩斯</li>
+					<li>凯恩斯</li>
+					<li>图文巴</li>
+					<li>布里斯班</li>
+					<li>图文吧</li>
+					<li>布里斯班</li>
+					<li>布里斯班</li>
+				</ul>
+			</div>
+		</div>
+		<div class="st-alert">
+			<ul class="trip-style">
+				<a href="javascript:;"><li class="sel-style">玉米园</li></a>
+				<li>白菜园</li></a>
+				<li>大白菜园</li></a>
+				<li>香蕉园</li></a>
+				<li>菠萝蜜园</li></a>
+				<li>哈密瓜园</li></a>
+			</ul>
+		</div>
+		<div class="st-alert">
+			<ul class="trip-style">
+				<a href="javascript:;"><li class="sel-style">智能排序</li></a>
+				<a href="javascript:;"><li>距离最近</li></a>
+				<a href="javascript:;"><li>最多人去过</li></a>
+				<a href="javascript:;"><li>最多人想去</li></a>
+				<a href="javascript:;"><li>评论最多</li></a>
+				<a href="javascript:;"><li>评论最多</li></a>
+				<a href="javascript:;"><li>旅游产品最多</li></a>
+			</ul>
+		</div>
+		<div class="top-back"><img src="../images/top-back.png" alt="" /></div>
+		<!--搜索页面-->
+		<div class="search-page">
+			<header class="search">
+				<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="search-back" /></a>
+				<a href="javascript:;" class="search-icon"><img src="../images/search.png" /></a>
+				<input type="text" placeholder="搜索目的地/景点/攻略等" class="search-keyword" autofocus/>
+				<a href="javascript:;" class="search-click">搜索</a>
+			</header>
+			<div class="hot-search">
+				<h2>热门搜索</h2>
+				<div class="hot-info">
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里</a>
+					<a href="javascript:;" class="btn btn-default">化妆品</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+				</div>
+			</div>
+			<div class="history">
+				<h2>历史搜索<img src="../images/clear.png" alt="" /></h2>
+				<div class="history-info">
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">化妆品<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="javascript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/pull.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.ias.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//			无限加载
+			var ias = $.ias({
+				container: ".media-content", //包含所有文章的元素
+				item: ".media-item", //文章元素
+				pagination: "#navigation", //分页元素
+				next: ".next a", //下一页元素
+			});
+
+			ias.extension(new IASSpinnerExtension());
+			ias.extension(new IASTriggerExtension({
+				offset: 4
+			}));
+			ias.extension(new IASNoneLeftExtension({
+				text: 'You reached the end'
+			}));
+		})
+	</script>
+</html>

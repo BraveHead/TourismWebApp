@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/mobiscroll.css" />
+		<link rel="stylesheet" href="../css/mobiscroll_002.css" />
+		<link rel="stylesheet" href="../css/mobiscroll_003.css" />
+		<link rel="stylesheet" href="../css/traveller-info-write.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>出行人信息填写</title>
+		<style type="text/css">
+			.mui-dtpicker {
+				max-width: 640px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form action="https://www.baidu.com/" method="post" enctype="multipart/form-data">
+				<div class="traveller-header">
+					<a class="cancel" href="write-order.html#traveller">取消</a>
+					<h4>出行人信息填写</h4>
+					<!--<a class="save" href="#">保存</a>-->
+					<button type="submit" class="save">保存</button>
+				</div>
+				<div class="traveller-info">
+					<table class="table">
+						<tr>
+							<th>姓名</th>
+							<th><input type="text" placeholder="请填写出行人姓名" /></th>
+							<th></th>
+						</tr>
+						<tr>
+							<th>出生年月日</th>
+							<th><input type="text" name="aa" id="appDate" class="sel-val" placeholder="请选择出生年月"></th>
+							<th><label for="appDate"><img src="../images/pull.png" alt=""/></label></th>
+						</tr>
+						<tr class="sel-gender">
+							<th class="sex">性别</th>
+							<th style="position: relative;"><input type="text" placeholder="请选择性别" id="sel-gender" readonly="readonly" /><div style="position: absolute;width: 100%;height: 40px;background-color: transparent;left: 0;top: 0;"></div></th>
+							<th><label for="sel-gender"><img src="../images/pull.png" alt="" class="gender"/></label></th>
+						</tr>
+						<tr>
+							<th class="carry">随身物品</th>
+							<th><input type="text" placeholder="请选择随身物品" id="sel-res" /></th>
+							<th><label for="sel-res"><img src="../images/pull.png" alt="" /></label></th>
+						</tr>
+						<tr class="traveller-check">
+							<th class="carry">多选</th>
+							<th><input type="text" placeholder="多选" id="multiple" readonly="readonly"/></th>
+							<th><label for="sel-res"><img src="../images/pull.png" alt="" /></label></th>
+						</tr>
+					</table>
+				</div>
+		</form>
+		<!--弹框-->
+		<div class="dialogBg"></div>
+		<!--单选类弹框-->
+		<div id="modal-radio">
+			<div class="modal-con1">
+				<input type="radio" name="radio-1" id="radio1" checked="checked" /><label for="radio1">男</label>
+				<br />
+				<input type="radio" name="radio-1" id="radio2" /><label for="radio2">女</label>
+			</div>
+			<div class="order-modal-footer1">
+				<ul>
+					<li class="order-con">确定</li>
+					<li class="order-can">取消</li>
+				</ul>
+			</div>
+		</div>
+		<!--多选类弹框-->
+		<div id="modal-checkbox">
+			<div class="modal-con2">
+				<input type="checkbox" name="checkbox-1" id="checkbox-1" value="" checked="checked" /><label for="checkbox-1">剪羊毛场次1</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-2" value="" /><label for="checkbox-2">剪羊毛场次2</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-3" value="" /><label for="checkbox-3">剪羊毛场次3</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-4" value="" /><label for="checkbox-4">剪羊毛场次4</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-5" value="" /><label for="checkbox-5">剪羊毛场次5</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-6" value="" /><label for="checkbox-6">剪羊毛场次5</label>
+				<div class="gap"></div>
+				<input type="checkbox" name="checkbox-1" id="checkbox-7" value="" /><label for="checkbox-7">剪羊毛场次5</label>
+			</div>
+			<div class="order-modal-footer2">
+				<ul>
+					<li class="order-con">确定</li>
+					<li class="order-can">取消</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sel-alert">请选择</div>
+	</body>
+
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_002.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_004.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_003.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mobiscroll/mobiscroll_005.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//			性别选择
+			var screenW = $(window).width();
+			var screenH = $(window).height();
+			var alertW = $('.gender-modal').outerWidth(true);
+			var alertH = $('.gender-body').outerHeight(true);
+			var alertL = (screenW - alertW) / 2;
+			var alertT = (screenH - alertH) / 2;
+			var gender;
+			$('.sel-gender').click(function() {
+				var gender = ""
+				$('.dialogBg').fadeIn(200); //显示弹框
+				$('#modal-radio').removeAttr('class').addClass('bounceIn').fadeIn();
+				gender = $('input[type=radio]:checked').next().text();
+				$('.modal-con1 input').click(function() {
+					gender = $('input[type=radio]:checked').next().text();
+				});
+				$('.order-modal-footer1 li.order-con').click(function() {
+					$('.dialogBg').fadeOut(200, function() {
+						$('#modal-radio').addClass('bounceOutUp').fadeOut();
+						$('#sel-gender').val(gender);
+						$('body').removeAttr('style');
+					})
+				});
+				$('.order-modal-footer1 li.order-can').click(function() {
+					$('.dialogBg').fadeOut(200, function() {
+						$('#modal-radio').addClass('bounceOutUp').fadeOut();
+					})
+				})
+
+			});
+//			多选
+			$('.traveller-check').click(function() {
+				var index = $(this).index();
+				$('.dialogBg').fadeIn(200);
+				$('body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});
+				$('#modal-checkbox').removeAttr('class').addClass('bounceIn').fadeIn();
+				$('.modal-con2 input').click(function() {
+					var selText2 = "";
+					$('input[type=checkbox]:checked').each(function() {
+						selText2 += $(this).next().text() + ", ";
+					});
+					$('.order-modal-footer2 li.order-con').click(function() {
+						$('.dialogBg').fadeOut(100, function() {
+							$('#multiple').val(selText2.substring(0,selText2.length-2));
+						})
+					});
+				})
+
+				$('.order-modal-footer2 li.order-con').click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('#modal-checkbox').addClass('bounceOutUp').fadeOut();
+						$('#multiple').val($('input[type=checkbox]:checked').next().text());
+						$('body').removeAttr('style');
+					})
+				})
+				$('.order-modal-footer2 li.order-can').click(function() {
+					$('.dialogBg').fadeOut(100, function() {
+						$('body').removeAttr('style');
+						$('#modal-checkbox').addClass('bounceOutUp').fadeOut();
+					})
+				})
+
+			})
+
+			//			窗口大于640时,弹框展示样式调整
+			if(screenW >= 640) {
+				$('.dialogBg').css('left', (screenW - 640) / 2);
+			}
+		})
+	</script>
+	<script type="text/javascript">
+		//	选择日期类
+		$(function() {
+			var currYear = (new Date()).getFullYear();
+			var opt = {};
+			opt.date = {
+				preset: 'date'
+			};
+			opt.datetime = {
+				preset: 'datetime'
+			};
+			opt.time = {
+				preset: 'time'
+			};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+				display: 'modal', //显示方式
+				mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+				startYear: currYear - 20, //开始年份
+				endYear: currYear + 10 //结束年份
+			};
+
+			$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+				//		提示用户填写相关信息
+			$("form").submit(function(e) {
+				var timer;
+				var relateInfoLength = $('.table input').length;
+				var arr3 = [];
+				for(var i = 0; i < relateInfoLength; i++) {
+					if($('.table input').eq(i).val() == "") {
+						arr3.push(i);
+					}
+				}
+				if(arr3.length > 0) {
+					e.preventDefault();
+					var relateInfoContent = $('.table tr').eq(arr3[0]).find('th').eq(0).text();
+					$('.sel-alert').text("请填写" + relateInfoContent);
+					var alertL = $(window).width() - $('.sel-alert').width();
+					var alertT = $(window).height() - $('.sel-alert').height();
+					$('.sel-alert').css({
+						'left': alertL / 2,
+						'top': alertT / 2
+					});
+					$('.sel-alert').fadeIn(200, function() {
+						timer = setTimeout(function() {
+							$('.sel-alert').fadeOut(200)
+						}, 3000)
+					})
+				}
+
+			})
+
+		})
+	</script>
+
+</html>

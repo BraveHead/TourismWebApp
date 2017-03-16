@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				max-width: 640px;
+				margin: 0 auto;
+				background-color: #f1f1f1;
+			}
+			
+			.issue {
+				left: auto;
+				top: 16px;
+				right: 0.29rem;
+				color: #1a1818;
+			}
+			
+			.dt-space {
+				border-top-color: transparent;
+			}
+			
+			.area textarea {
+				border: 0;
+				width: 100%;
+				background-color: #fafafa;
+				height: 2.9rem;
+				text-indent: 10px;
+				padding: 10px 0;
+			}
+			
+			.area {
+				position: relative;
+				background-color: #fafafa;
+			}
+			
+			.limit {
+				position: absolute;
+				right: 0.2rem;
+				bottom: 0.3rem;
+			}
+			
+			.com-alert {
+				width: 80%;
+				text-align: center;
+				border: 1px solid #ccc;
+				margin: 0 auto;
+			}
+			
+			.com-alert p {
+				height: 2rem;
+				line-height: 2rem;
+				border-bottom: 1px solid #ccc;
+				margin: 0;
+				margin: 0;
+			}
+			
+			.com-alert a {
+				display: block;
+				padding: 0.1rem 0;
+				color: #3c3c3c;
+			}
+			
+			.com-alert-wp {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				position: fixed;
+				top: 0;
+				left: -100%;
+				z-index: 1000;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+			}
+			
+			.add-pic {
+				padding: 0.2rem 0;
+				text-align: center;
+				border-bottom: 1px solid #cdcdcd;
+				border-top: 1px solid #cdcdcd;
+				background-color: #fafafa;
+				margin-top: 0.2rem;
+			}
+			
+			.add-pic img {
+				width: 1.82rem;
+			}
+			
+			.add-space {
+				width: 100%;
+				height: 0.20rem;
+				background-color: #f1f1f1;
+				border-top: 1px solid #cdcdcd;
+				border-bottom: 1px solid #cdcdcd;
+				margin-top: -0.065rem;
+			}
+			
+			.upload-img {
+				width: 100%;
+				background-color: #fafafa;
+				border-bottom: 1px solid #cdcdcd;
+			}
+			
+			.img-list {
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-left: 0;
+				width: 93%;
+				margin: 0 auto;
+			}
+			
+			.img-list li {
+				margin-bottom: 0.24rem;
+				border: 1px solid #fdfdfd;
+				position: relative;
+			}
+			
+			.img-list li img {
+				width: 1.5rem;
+				height: 1.5rem;
+				border-radius: 8px;
+			}
+			
+			.tap-dele {
+				display: inline-block;
+				width: 0.45rem;
+				height: 0.45rem;
+				background-color: #0cd084;
+				color: #ffffff;
+				text-align: center;
+				line-height: 0.45rem;
+				font-size: 0.4rem;
+				border-radius: 50%;
+				position: absolute;
+				top: -0.22rem;
+				right: -0.22rem;
+				display: none;
+			}
+			.ui-loader {display: none;}
+
+		</style>
+		<title>写评论</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="comment.html" target="_top"><img src="../images/fanhui.png" alt="" class="icon-back" /></a>
+			<h1>写评论</h1>
+			<a href="javascript:;" class="issue" style="left: auto;top:16px">发布</a>
+		</div>
+		<div class="dt-space"></div>
+		<div class="area">
+			<textarea name="" rows="" cols="" placeholder="快来写下你的感受吧~"></textarea>
+			<span class="limit">0/500</span>
+
+		</div>
+		<div class="upload-img">
+			<ul class="img-list">
+				<li><img src="../images/order-info.png" /><span class="tap-dele">x</span></li>
+				<li><img src="../images/order-info.png" /><span class="tap-dele">x</span></li>
+				<li><img src="../images/order-info.png" /><span class="tap-dele">x</span></li>
+				<li><img src="../images/order-info.png" /><span class="tap-dele">x</span></li>
+				<li><img src="../images/order-info.png" /><span class="tap-dele">x</span></li>
+			</ul>
+		</div>
+
+		<div class="add-pic"><img src="../images/add-pic.png" alt="" /></div>
+
+		<div class="com-alert-wp">
+			<div class="com-alert">
+				<p>你输入的内容过长，不能超过500字符</p>
+				<a href="javascript:;">确定</a>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.mobile-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+//			限制字数
+			function maxLimit() {
+				$(this).next("span").text($(this).val().length + "/500");
+				var mostWord = $('.area textarea').val();
+				var length = 500 - mostWord.length;
+				if(length < 0) {
+					$('.com-alert-wp').css({
+						'left': '0'
+					});
+				};
+				var num = $(this).val().substr(0, 500);
+				$(this).val(num);
+			};
+			$('.area textarea').keyup(maxLimit);
+			$('.com-alert a').click(function() {
+				$('.com-alert-wp').css({
+					'left': '-100%'
+				});
+			})
+//			长按删除评论图片
+			$('.img-list li img').on("taphold", function(e) {
+				$('.tap-dele').fadeIn();
+				e.stopPropagation();
+			})
+			$('.img-list li').click(function(e) {
+				//	e.preventDefault();
+				//return false;
+				e.stopPropagation()
+			})
+			$('.tap-dele').click(function(e) {
+				$(this).parent().find('img').remove();
+				$(this).parent().remove()
+				$(this).remove();
+				e.stopPropagation()
+			})
+			$(document).click(function() {
+				$('.tap-dele').fadeOut();
+			})
+		})
+	</script>
+
+</html>

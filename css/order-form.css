@@ -1,0 +1,14 @@
+body {background-color: #fafafa;max-width: 640px;margin: 0 auto;}
+.order-nav {display: flex;padding-left: 0;padding: 8px 0;margin-bottom: 0;}
+.order-nav li {flex: 1;text-align: center;font-size: 18px;}	
+.order-nav li a {padding: 3px 0;color: #6d6d6d;}
+a:hover , a:focus , a:visited {text-decoration: none;outline: none;}
+.dt-space {width: 100%;height: 0.19rem;background-color: #f1f1f1;border-top:1px solid #d5d5d5;border-bottom: 1px solid #d5d5d5;}	
+.my-list-group {margin-bottom: 0px;background-color: #fdfdfd;}
+.list-group-item span.badge{border: 0;color: #3c3c3c;background-color: #fdfdfd;font-weight: 500;}
+.list-group-item {border: 0;font-size: 14px;color:#3c3c3c;padding: 10px 0;margin: 0px 15px;background-color: #fdfdfd;}
+.list-group-item span.pay {color: #0cd084;}
+.wait , .waited{float: right;margin-right: 10px;color: #ff8a00;}
+.order-info {font-size: 12px;color: #6d6d6d;border-bottom: 1px solid #cdcdcd;}
+.order-total {font-weight: 700;border-top: 1px solid #cdcdcd;}
+.active {border-bottom:2px solid #3cd384;}

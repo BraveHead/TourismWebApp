@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/choose-attr.css" />
+		<link rel="stylesheet" href="../css/product-detail-header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>选择属性</title>
+	</head>
+	<body>
+		<header class="pd-header">
+			<div class="dt-header">
+				<img class="back-img" src="../images/fanhui.png" />
+				<h1 class="dt-title">布里斯班故事桥攀爬</h1>
+				<img class="collect-img" src="../images/shoucang.png" />
+				<img class="uparrow-img" src="../images/fenxiang.png" alt="" />
+			</div>
+		</header>
+		<div class="ca-img"><img src="../images/banana1.png" alt="" /></div>
+			<ul class="ca-amount">
+				<li>
+					<div class="ca-part1"><var class="lacking">成人：</var><span class="lacking">($<i class="unit-price">2100.88</i>)</span></div>
+					<div class="input-group ca-part2"><span class="input-group-addon">-</span><input type="text" class="form-control" readonly="readonly"><span class="input-group-addon">+</span></div>
+				</li>
+	
+	        </ul>
+		
+		<div class="ca-top">
+			<div class="ca-content clearfix">
+			<div class="dt-des-wp clearfix">
+				<img src="../images/close.png" alt="" />
+				<h1 class="ca-des">布里斯班故事桥攀爬标题，特别长的话就会到第二行，第二行当然放的完布里斯班故事桥攀爬标题，特别长的话就会到第二行，第二行当然放的完布里斯班故事桥攀爬标题，特别长的话就会到第二行，第二行当然放的完</h1>
+				
+			</div>
+			<div class="ca-type">
+				<h2>产品类型</h2>
+			<div class="bth-group ca-btn-group">
+				<button type="button" class="btn btn-default ca-btn checked-type">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					二日
+				</button>
+			</div>
+			<h2>产品类型</h2>
+			<div class="bth-group ca-btn-group">
+				<button type="button" class="btn btn-default ca-btn checked-type  checked-type">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					一日电子票
+				</button>
+				<button type="button" class="btn btn-default ca-btn">
+					二日
+				</button>
+			</div>
+			<h2>选择数量</h2>
+			 <ul class="ca-amount">
+			<li><div class="ca-part1"><var>成人：</var><span>(<i class="unit-price">$299</i>)</span></div><div class="ca-part2"><a href="javacript:;" class="btn-minus">-</a><input name="数量" value="1"/><a href="javascript:;" class="btn-plus">+</a></div></li>
+			<li><div class="ca-part1"><var>儿童：</var><span>(3-13岁)&nbsp&nbsp&nbsp($299)</span></div><div class="ca-part2"><a href="javacript:;">-</a><input name="数量" value="100"/><a href="javascript:;">+</a></div></li>
+		</ul>
+			
+			</div>
+			
+			
+			
+		</div>
+		<div class="cs-footer">
+			<ul style="margin-bottom: 0;">
+				<li class="total"><span>总金额：</span> <var>$299</var></li>
+				<li class="buy">立即购买</li>
+			</ul>
+		</div>
+		<div class="ca-small-img"><img src="../images/select-xiaotu.png"/></div>
+			
+		</div>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		$('.ca-btn-group button').click(function(){
+			$(this).parent().children().removeClass('checked-type');
+			$(this).addClass('checked-type');
+			
+		})
+	</script>
+</html>

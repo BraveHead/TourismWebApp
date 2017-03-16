@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/order-form.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>订单列表</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="javascrript:;"><img src="../images/fanhui.png" alt="" class="icon-back"></a>
+			<h1>我的订单</h1>
+		</div>
+		<ul class="order-nav">
+			<li>
+				<a href="javascript:;">折扣订单</a>
+			</li>
+			<li>
+				<a href="javascript:;">外卖订单</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="active">旅游订单</a>
+			</li>
+		</ul>
+		<div class="dt-space"></div>
+		<ul class="list-group my-list-group">
+			<a href="javascript:;">
+				<li class="list-group-item order-info">
+					<span class="badge pay">支付完成</span>
+					<span class="wait">待出票</span> 订单编号： 132435465735345
+				</li>
+				<li class="list-group-item">
+					<span class="badge">$88.00</span> 黄金海岸大厦 星空搭观景台
+				</li>
+				<li class="list-group-item">
+					sku1 sku2
+				</li>
+				<li class="list-group-item">
+					<span class="badge">x1</span> 成人
+				</li>
+				<li class="list-group-item">
+					<span class="badge">x3</span> 学生
+				</li>
+				<li class="list-group-item order-total">
+					<span>合计：$88.0</span>
+				</li>
+			</a>
+		</ul>
+		<div class="dt-space"></div>
+		<ul class="list-group my-list-group">
+			<a href="javascript;;">
+				<li class="list-group-item order-info">
+					<span class="badge refunded">已退款</span>
+					<span class="waited">已出票</span> 订单编号： 132435465735345
+				</li>
+				<li class="list-group-item">
+					<span class="badge">$88.00</span> 黄金海岸大厦 星空搭观景台
+				</li>
+				<li class="list-group-item">
+					sku1 sku2
+				</li>
+				<li class="list-group-item">
+					<span class="badge">x1</span> 成人
+				</li>
+				<li class="list-group-item">
+					<span class="badge">x3</span> 学生
+				</li>
+				<li class="list-group-item order-total">
+					<span>合计：$88.0</span>
+				</li>
+			</a>
+		</ul>
+
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			$('.order-nav li a').click(function() {
+				$('.order-nav li a ').removeClass('active');
+				$(this).addClass('active');
+			});
+		})
+	</script>
+
+</html>

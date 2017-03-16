@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>全场搜索页</title>
+		<style type="text/css">
+			body {
+				max-width: 640px;
+				margin: 0 auto;
+			}
+			
+			.search {
+				position: relative;
+				padding: 8px 0;
+				background-color: #fafafa;
+				border-bottom: 1px solid #d9d9d9;
+				text-align: center;
+			}
+			
+			.search-icon {
+				position: relative;
+				display: inline-block;
+			}
+			.search-icon img {width: 20px;position: absolute;top: 9px;left: 9px;z-index: 1000;}
+			.search>a:first-child {
+				position: absolute;
+				top: 15px;
+				left: 0.29rem;
+			}
+			
+			.search>a:last-child {
+				position: absolute;
+				top: 17px;
+				right: 0.29rem;
+			}
+			
+			.search input {
+				padding: 8px 0;
+				font-size: 14px;
+				border-radius: 8px;
+				border: 0;
+				background-color: #f7f7f7;
+				opacity: 0.9;
+				text-indent: 30px;
+				width: 230px;
+				background-color: #eaeaea;
+				padding-left: 15px;
+			}
+			.search-back {
+				width: 10px;
+			}
+			
+			.search-click {
+				font-size: 16px;
+				color: #3c3c3c;
+				vertical-align: middle;
+			}
+			
+			.hot-search,
+			.history {
+				padding-left: 0.4rem;
+			}
+			
+			.hot-search h2,
+			.history h2 {
+				font-size: 0.3rem;
+				padding-left: 0.2rem;
+				font-weight: 600;
+			}
+			
+			.hot-info,
+			.history-info {
+				padding-left: 0.15rem;
+			}
+			
+			.hot-search h2 {
+				background: url(../images/hot-search.png) no-repeat left center;
+				background-size: 0.33rem 0.42rem;
+				padding-left: 0.5rem;
+				height: 0.42rem;
+				line-height: 0.42rem;
+			}
+			
+			.history h2 {
+				background: url(../images/history.png) no-repeat left center;
+				background-size: 0.33rem 0.42rem;
+				padding-left: 0.5rem;
+			}
+			
+			.hot-info,
+			.history-info {
+				width: 88%;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.hot-info>a {
+				margin: 0 6px 10px 0;
+				padding: 4px 5px;
+			}
+			
+			.history-info>a {
+				margin: 0 10px 12px 0;
+				position: relative;
+				padding: 4px 5px;
+			}
+			
+			.history-info img {
+				width: 20px;
+				position: absolute;
+				top: -10px;
+				display: none;
+			}
+			
+			.history h2 img {
+				width: 0.38rem;
+				float: right;
+				margin-right: 0.3rem;
+			}
+			
+			@media only screen and (min-width:540px) {
+				.hot-search h2,
+				.history h2 {
+					background-size: 0.25rem 0.31rem;
+				}
+				.hot-search h2,
+				.history h2 {
+					font-size: 0.25rem;
+				}
+				.history h2 img {
+					width: 0.32rem
+				}
+			}
+			
+			.search-page {
+				max-width: 640px;
+				margin: 0 auto;
+				width: 100%
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="search-page">
+			<header class="search">
+				<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="search-back" /></a>
+				<div class="search-icon">
+					<a href="javascript:;"> <img src="../images/search.png" /></a>
+					<input type="text" placeholder="搜索目的地/景点/攻略等" autofocus/>
+			  </div>
+			</header>
+			<div class="hot-search">
+				<h2>热门搜索</h2>
+				<div class="hot-info">
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里</a>
+					<a href="javascript:;" class="btn btn-default">化妆品</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+					<a href="javascript:;" class="btn btn-default">布里斯班</a>
+				</div>
+			</div>
+			<div class="history">
+				<h2>历史搜索<img src="../images/clear.png" alt="" /></h2>
+				<div class="history-info">
+					<a href="javacript:;" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">化妆品<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+					<a href="https://www.baidu.com" class="btn btn-default">布里斯班<img src="../images/delete.jpg" alt="" class="delete" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			var deleteShowBool = false;
+			$('.history h2').find('img').click(function() {
+				if(deleteShowBool == false) {
+					$('.delete').fadeIn();
+					$('.delete').css('display', 'inline-block');
+					deleteShowBool = true;
+				} else {
+					$('.delete').fadeOut();
+					deleteShowBool = false;
+				}
+
+			})
+			$('.history-info a').click(function() {
+				if(deleteShowBool) {
+					$(this).attr('href', 'javascript:;');
+					$(this).remove();
+				} else {
+					window.location.href = "$(this).attr('href')";
+				}
+
+			})
+
+		})
+	</script>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/strategy.css" />
+		<link rel="stylesheet" href="../css/relate-spot.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.sp-content {
+				max-width: 640px;
+				margin: 120px auto 0;
+			}
+			
+			.pl-info {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+			}
+			
+			.pl-info p {
+				margin: 0;
+			}
+			
+			.pl-info big {
+				float: right;
+			}
+			
+			.pl-info var {
+				font-size: 12px;
+			}
+			
+			.sp-heading {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+			
+			.destination {
+				background-color: #fdfdfd;
+				padding: 0;
+				position: absolute;
+				width: 7.5rem;
+			}
+			
+			.destination ul {
+				float: left;
+				padding: 0;
+				margin-bottom: 0px;
+			}
+			
+			.destination ul li {
+				border-bottom: 1px solid #d7d7d7;
+				height: 42px;
+				/*line-height: 41px;*/
+			}
+			
+			.city-wp li {
+				padding: 0;
+			}
+			
+			.city-list li {
+				line-height: 41px;
+			}
+			
+			.destination .city-wp {
+				width: 28.8%;
+				background-color: #ebebeb;
+			}
+			
+			.destination .city-list {
+				width: 64.6%;
+			}
+			
+			.destination .city-list li {
+				/*border-left: 1px solid #d7d7d7;*/
+				text-indent: 10px;
+				padding: 0;
+			}
+			
+			.sel-spots {
+				background: url(../images/duihao.png) no-repeat;
+				background-size: 18px;
+				background-position: 3.8rem;
+			}
+			
+			.destination .kong {
+				width: 6.2%
+			}
+			
+			.destination ul li:last-child {
+				border: 0;
+			}
+			
+			.bulk {
+				width: 5px;
+				height: 41px;
+				background-color: #0cd084;
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: 0.36rem;
+				visibility: hidden;
+			}
+			
+			.top-back {
+				display: none;
+			}
+			
+			.top-back>img {
+				width: 40px;
+				position: fixed;
+				bottom: 70px;
+				right: 15px;
+				z-index: 1000;
+			}
+		</style>
+		<title>选择目的地完毕2</title>
+	</head>
+
+	<body>
+		<div class="pl-header navbar-fixed-top">
+			<div class="pl-title">
+				<a href="javascript:;"><img src="../images/fanhui.png" class="pl-back" /></a>
+				<h1>布里斯班景点</h1>
+				<a href="javascript:;"><img src="../images/search.png" class="pl-search" /></a>
+			</div>
+			<ul class="st-type">
+				<li class="tripe-style-wp">目的地<img src="../images/select-ico1.png" alt="" /></li>
+
+				<li class="tripe-style-wp">筛选<img src="../images/select-ico2.png" alt="" /></li>
+				<li class="tripe-style-wp">排序方式<img src="../images/select-ico2.png" alt="" /></li>
+			</ul>
+
+		</div>
+		<div class="sp-content">
+			<div class="media-content">
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="javascript:;" class="media-left my-media-left">
+							<img src="../images/xq_xg1.png" alt="" class="small-img" />
+						</a>
+						<div class="media-body my-media-body">
+							<a href="javascript:;">
+								<h4 class="media-heading my-heading">我是景点标题哈</h4>
+								<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+								<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="" class="media-left my-media-left">
+							<img src="../images/xq_xg1.png" alt="" class="small-img" />
+						</a>
+						<div class="media-body my-media-body">
+							<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+							<!--<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>-->
+							<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="" class="media-left my-media-left"></a>
+						<div class="media-body my-media-body">
+							<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+							<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+							<p class="spots clearfix"><big class="dis">2km</big></p>
+						</div>
+					</div>
+				</div>
+				<div class="media-item">
+					<div class="media my-media">
+						<a href="" class="media-left my-media-left"></a>
+						<div class="media-body my-media-body">
+							<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+							<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+							<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+						</div>
+					</div>
+				</div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="media my-media">
+					<a href="" class="media-left my-media-left"></a>
+					<div class="media-body my-media-body">
+						<h4 class="media-heading my-heading">我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行我是景点标题哈，不过最多两行</h4>
+						<var class="dt-mark">免费</var><var class="dt-mark">游乐场</var>
+						<p class="spots clearfix"><label class="num">99</label><big class="dis">2km</big><i class="rel">去过</i></p>
+					</div>
+				</div>
+				<div class="xian"></div>
+			</div>
+		</div>
+
+		<div class="st-alert">
+			<div class="destination clearfix">
+				<ul class="city-wp clearfix">
+					<li><span class="bulk"></span>昆士兰州</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+					<li><span class="bulk"></span>新南威尔士</li>
+				</ul>
+				<ul class="kong"></ul>
+				<ul class="city-list clearfix">
+					<li><var>布里斯班</var></li>
+					<li><var>凯恩斯</var></li>
+					<li><var>图文巴</var></li>
+					<li><var>布里斯班</var></li>
+					<li><var>图文吧</var></li>
+					<li><var>布里斯班</var></li>
+					<li><var>布里斯班</var></li>
+				</ul>
+				<ul class="city-list clearfix" style="display: none;">
+					<li><var>凯恩斯</var></li>
+					<li><var>凯恩斯</var></li>
+					<li><var>凯恩斯</var></li>
+					<li><var>图文巴</var></li>
+					<li><var>布里斯班</var></li>
+					<li><var>图文吧</var></li>
+					<li><var>布里斯班</var></li>
+					<li><var>布里斯班</var></li>
+				</ul>
+			</div>
+		</div>
+		<div class="st-alert">
+			<ul class="trip-style">
+				<li>玉米园</li>
+				<li>白菜园</li>
+				<li>大白菜园</li>
+				<li>香蕉园</li>
+				<li>菠萝蜜园</li>
+				<li>哈密瓜园</li>
+			</ul>
+		</div>
+		<div class="st-alert">
+			<ul class="trip-style">
+				<li>智能排序</li>
+				<li>距离最近</li>
+				<li>最多人去过</li>
+				<li>最多人想去</li>
+				<li>评论最多</li>
+				<li>评论最多</li>
+				<li>旅游产品最多</li>
+			</ul>
+		</div>
+		<div class="top-back"><img src="../images/top-back.png" alt="" /></div>
+	</body>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/pull.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

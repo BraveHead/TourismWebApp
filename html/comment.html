@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/comment.css" />
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<title>评论</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="javascript:;"><img src="../images/fanhui.png" alt="" class="icon-back"/></a>
+			<h1>评论</h1>
+		</div>
+		<div class="dt-space"></div>
+		<div class="container-fluid write-com">
+			<div class="row">
+				<div class="col-xs-6" style="padding-left: 0;"><a href="write-comment.html"><img src="../images/comment-1.png" alt="" style="width:18px;margin-right: 15px;"/></a><span>写评论</span></div>
+				<div class="col-xs-6"><a href="javascript:;"><img src="../images/left.png" alt="" style="width:9px;float: right;margin-top: 15px;"/></a></div>
+			</div>
+
+		</div>
+		<div class="dt-space"></div>
+		<div class="comment-part">
+			<div class="comment-box">
+				<div class="comment-part-info">
+					<div class="observer">
+						<img src="../images/xq_ren.png" alt="" />
+						<bdi>小猫咪凑热闹</bdi>
+					</div>
+					<div class="com-content">
+						澳洲游乐场真的是个充满神奇的地方
+					</div>
+					<div class="com-date">
+						<span class="comment-time">8 Jul 2016</span><a href="javascript:;"><img src="../images/comment-2.png" alt="" class="comment-btn"/></a>
+					</div>
+				</div>
+			</div>
+			<div class="dt-space"></div>
+			<div class="comment-box">
+				<div class="comment-part-info">
+					<div class="observer">
+						<img src="../images/xq_ren.png" alt="" />
+						<bdi>小猫咪凑热闹</bdi>
+					</div>
+					<div class="com-content" id="com-content">
+						艾尔利海滩高空跳伞位于昆士兰最受欢迎的旅游景点之一: 圣灵群岛的心脏地带。她地理位置优越, 拥有得天独厚的湛蓝海滨; 艾尔利海滩高空跳伞位于昆士兰最受欢迎的旅游景点之一: 圣灵群岛的心脏地带。她地理位置优越, 拥有得天独厚的湛蓝海滨; 艾尔利海滩高空跳伞位于昆士兰最受欢迎的旅游景点之一: 圣灵群岛的心脏地带。她地理位置优越, 拥有得天独厚的湛蓝海滨
+					</div>
+					<div class="com-pic">
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+						<img src="../images/com-pic.png" alt="" />
+					</div>
+					<div class="com-date">
+						<span class="comment-time">8 Jul 2016</span><a href="javascript:;"><img src="../images/comment-2.png" alt="" class="comment-btn"></a>
+					</div>
+				</div>
+			</div>
+					<div class="reply-wp">
+						<div class="reply-box">
+							<div class="observer">
+								<img src="../images/xq_ren.png" alt="" class="user-head"/>
+								<bdi class="user-nick">温柔的路人甲</bdi>
+								<var>8 JuL 2015</var>
+							</div>
+							<div class="com-content" id="com-content">
+								艾尔利海滩高空跳伞位于昆士兰最受欢迎的旅游景点之一
+							</div>
+						</div>
+						<div class="reply-box">
+							<div class="observer">
+								<img src="../images/xq_ren.png" alt="" class="user-head"/>
+								<bdi class="user-nick">回复者昵称</bdi>
+								<var>8 JuL 2015</var>
+							</div>
+							<div class="com-content" id="com-content">回复 <bdi>温柔的路人甲</bdi>：
+								艾尔利海滩高空跳伞位于昆士兰最受欢迎的旅游景点之一
+							</div>
+						</div>
+					</div>
+
+			<div class="dt-space"></div>
+			<div class="comment-box">
+				<div class="comment-part-info">
+					<div class="observer">
+						<img src="../images/xq_ren.png" alt="" class="comment-btn"/>
+						<bdi>小猫咪凑热闹</bdi>
+					</div>
+					<div class="com-content">
+						澳洲游乐场真的是个充满神奇的地方
+					</div>
+					<div class="com-date">
+						<span>8 Jul 2016</span><a href="javascript:;"><img src="../images/comment-2.png" alt="" class="comment-btn"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="comment-modal"></div>
+		<div class="comment-input">
+			<div class="headline">
+				<p class="comment-cancle">取消</p>
+				<p>写评论</p>
+				<p class="comment-send">发送</p>
+			</div>
+			<div class="comment-content">
+				<textarea name="comment" placeholder="评论..."></textarea>
+			</div>
+		</div>
+		<div class="reply-input">
+			<div class="headline">
+				<p class="reply-cancle">取消</p>
+				<p>写回复</p>
+				<p class="reply-send">发送</p>
+			</div>
+			<div class="reply-content">
+				<textarea name="reply" placeholder=""></textarea>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/highlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+//			超过6行显示展开
+			$('.pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
+			$("#com-content").ellipsis({
+				line: 6
+			});
+//			点击评论按钮添加评论内容
+//          格式化日期
+			function formateDate(date){
+				var y =date.getFullYear();
+				var m =date.getMonth() + 1;
+				var d =date.getDate();
+				var h =date.getHours();
+				var mi =date.getMinutes();
+				h = h > 9 ? h : '0' + h;
+				mi = mi > 9 ? mi : '0' + mi;
+				m = m > 9 ? m : '0' + m;
+				return y + "-" + m +"-" + d + " " + h + ":" + mi;
+			}
+//			阻止默认事件
+			function preventDefaultFn(event){
+				event.preventDefault();
+			}
+
+			$('.comment-box').on('click' , '.comment-btn' , function(){
+            	var parentElement =$(this).parent().parent().parent().parent('.comment-box');
+            	$('.comment-modal').fadeIn(100 , function(){
+            		$('body').css('overflow' , 'hidden');
+            		$('body').on('touchmove' , preventDefaultFn);
+            		$('.comment-input').fadeIn()
+            	})
+//          	点击取消按钮,关闭评论弹框
+            	$('.comment-cancle').click(function(){
+            		$('.comment-input').fadeOut(100 , function(){
+            		$('.comment-modal').fadeOut();
+            		$('body').removeAttr('style');
+            		$('body').off('touchmove' , preventDefaultFn);
+            		})
+
+            	})
+//          	点击发送按钮,获取textarea内容
+				$('.comment-send').one("click" , function(){
+            		var html ="";
+            		var commentText = $('.comment-content textarea').val();
+            		html += '<div class="comment-part-info"><div class="observer"><img src="../images/xq_ren.png" alt="" /><bdi>小猫咪凑热闹</bdi></div>';
+            		html += '<div class="com-content">' + commentText + '</div>';
+            		html += '<div class="com-date"><span class="comment-time">' +formateDate(new Date())+ '</span><a href="javascript:;"><img src="../images/comment-2.png" alt="" class="comment-btn"/></a></div></div>';
+            		if(commentText.length > 0) {
+	            		$('.comment-input').fadeOut(100 , function(){
+	            			$('.comment-modal').fadeOut();
+	            			$('body').removeAttr('style');
+	            			$('body').off('touchomve' , preventDefaultFn);
+	                        $(parentElement).append(html);
+	            			$('.comment-content textarea').val("");
+	            		})
+            		}
+				})
+			})
+//			点击整块评论进行回复
+				$('.reply-wp').on('click' , '.reply-box' , function(){
+					var commentUser = $(this).find('.user-nick').text();
+					$('.comment-modal').fadeIn(100 , function(){
+						$('.reply-content textarea').attr('placeholder' , '回复'+commentUser+'：');
+						$('.reply-input').fadeIn();
+						$('body').css('overflow' , 'hidden');
+						$('body').on('touchmove' , preventDefaultFn);
+					})
+//          	点击取消按钮,关闭回复弹框
+	            	$('.reply-cancle').click(function(){
+	            		$('.reply-input').fadeOut(100 , function(){
+	            		$('.comment-modal').fadeOut();
+	            		$('body').removeAttr('style');
+	            		$('body').off('touchmove' , preventDefaultFn);
+	            		})
+
+	            	})
+//	            点击发送按钮获取回复内容
+					$('.reply-send').one("click" , function(){
+						var replyText = $('.reply-content textarea').val();
+						var html = "";
+						html += '<div class="reply-box"><div class="observer"><img src="../images/xq_ren.png" alt="" class="user-head"/><bdi class="user-nick">回复者昵称</bdi><var>'+formateDate(new Date())+'</var></div>';
+						html += '<div class="com-content" id="com-content">回复 <bdi>温柔的路人甲</bdi>'+' ：'+replyText+'</div></div>';
+						if(replyText.length > 0){
+							$('.reply-input').fadeOut(100 , function(){
+								$('.comment-modal').fadeOut();
+								$('.reply-wp').append(html);
+								$('.reply-content textarea').val("");
+								$('body').removeAttr('style');
+								$('body').off('touchmove' , preventDefaultFn);
+							})
+						}
+					})
+				})
+		})
+	</script>
+
+</html>

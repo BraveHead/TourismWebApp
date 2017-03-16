@@ -1,0 +1,12 @@
+.dt-header {max-width: 640px;margin: 0 auto;background-color: #fafafa;}
+.dt-title {font-size: 0.36rem;display: inline-block;width:4.8rem;vertical-align: middle;margin-bottom: 20px;font-weight: bold;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.back-img {width: 0.2rem;margin-left: 0.25rem;margin-right: 0.7rem;}
+.collect-img {width: 0.5rem;margin-right: 0.25rem;}
+.uparrow-img {width: 0.4rem;}
+@media only screen and (min-width:540px){
+	.dt-title {font-size: 0.3rem;}
+	.back-img {width: 0.15rem;}
+	.collect-img {width: 0.4rem;}
+	.uparrow-img {width: 0.3rem;}
+	.collection1 {width:0.35rem;height: 0.35rem;}
+}

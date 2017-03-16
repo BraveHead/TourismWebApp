@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script src="../js/remStyle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		body {background-color: #fdfdfd;}
+		.choice , .refund-ins {max-width: 640px;margin: 0 auto;}
+.refund {text-align: center;border-bottom: 1px solid #cdcdcd;height: 52px;position: relative;}
+.refund>a {position: absolute;top:15px;left: 0.29rem;}
+.refund , .reason {max-width: 640px;margin: 0 auto;}
+.refund>a img {width: 10px;}
+.refund h1 {display: inline-block;font-size: 20px;font-weight: bold;margin: 0px;vertical-align:middle;width:4.5rem;line-height: 52px;}
+.choice{  position: relative;  }  
+.choice label { margin-left: 0.45rem;}
+.choice .radio{position: relative;display: inline-block;  font-weight: 400;  padding-left: 25px;}  
+.choice .radio input{  
+    position: absolute;  
+    left: -9999px;  
+}  
+.choice .radio i{  
+    display: block;  
+    position: absolute;  
+    top: 4px;  
+    left: 0;  
+    width: 15px;  
+    height: 15px;  
+    outline: 0;  
+    border: 1px solid #9b9b9b;    
+    border-radius: 50%;  
+}  
+.choice .radio input:checked+i{  
+    border-color: #0dd084;  
+}  
+.choice .radio input+i:after{  
+    position: absolute;  
+    content: '';  
+    top: 1.5px;  
+    left: 2px;  
+    width: 9px;  
+    height: 9px;  
+    border-radius: 50%;  
+    background-color: #0dd084;  
+    opacity: 0;  
+}  
+.choice .radio input:checked+i:after{  
+    opacity: 1;  
+}  
+.refund-ins {width: 100%;text-align: center;}
+.refund-ins textarea {width: 87%;display: inline-block;margin-top: 10px;height: 2.5rem;text-indent: 14px;padding: 5px 0;background-color: #fdfdfd;border: 1px solid #d7d7d7;}
+.mys {width: 87%;margin: 20px auto;}
+.mys button {background-color: #0dd084;color: #fdfdfd;font-size: 16px;border: 0;padding:20px 0;}
+		</style>
+		<title>退款申请原因</title>
+	</head>
+	<body>
+		<div class="refund">
+			<a href=""><img src="../images/fanhui.png" alt="" /></a>
+			<h1>退款申请原因</h1>
+		</div>
+		<div class="choice">  
+    <label class="radio">退款原因一<input type="radio" name="radio" value="1" checked><i></i></label> 
+    <br />
+    <label class="radio">退款原因二<input type="radio" value="2" name="radio"><i></i></label>  
+    <br />
+    <label class="radio">退款原因三<input type="radio" value="3" name="radio"><i></i></label>  
+    <br />
+    <label class="radio">退款原因四<input type="radio" value="4" name="radio"><i></i></label>  
+</div> 
+<div class="refund-ins">
+	<textarea name="" rows="" cols="" placeholder="退款说明"></textarea>
+	<div class="btn-group btn-group-justified mys">
+		<div class="btn-group my-btn-group">
+		<button type="button" class="btn btn-default">提交申请</button>
+		</div>
+	</div>
+	
+</div>
+	</body>
+</html>

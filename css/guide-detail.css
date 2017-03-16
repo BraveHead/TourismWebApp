@@ -1,0 +1,32 @@
+.guide-wp {max-width: 640px;margin: 0 auto;}
+.guide-nav {max-width: 640px;margin: 0 auto;height: 52px;line-height: 52px;}
+.back-img {width: 0.3rem;margin-left: 0.3rem;}
+.collect-img {width: 0.52rem;margin: 0 0.4rem 0 5.06rem;}
+.uparrow-img {width: 0.4rem;}
+.guide-section1 {padding-top: 0.62rem;width: 100%;height: 4.5rem;background: url(../images/guide-title-img.png) no-repeat;background-size: 100% 100%;background-position: center;position: relative;}
+.guide-section1>h2 {font-size: 0.34rem;color: #fafafa;position: absolute;bottom: 3px;line-height: 0.4rem;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;width: 93%;left: 0;right: 0;margin: auto;}
+.guide-section2 {border-bottom:1px solid #d9d9d9;padding: 15px 0;}
+.user-info {position: relative;width:93%;margin: 0 auto;}
+.user-info .author>img {width:0.65rem;height: 0.65rem;border-radius: 0.4rem;display: inline-block;}
+.user-info .author .nickname {margin-left: 0.23rem;}
+.user-info .view>img {width: 0.48rem;height: 0.31rem;margin-left: 0.27rem;margin-right: 0.1rem;}
+.user-info bdi {vertical-align: middle;}
+.user-info .view {position: absolute;top:0.12rem;right: 0;}
+.guide-section3 {width: 93%;margin: 0 auto;line-height: 20px;}
+.guide-section3 {text-indent: 28px;}
+.guide-section3 p {margin-top: 10px;}
+.guide-fixed-right , .guider-fixed-left {position: fixed;top:11.85rem;z-index: 1000;}
+.guide-section4 .guider-fixed-left {width: 3.42rem;height: 0.9rem;background-color: #ffffff;border-top-right-radius: 0.5rem;border-bottom-right-radius: 0.5rem;line-height: 0.95rem;box-shadow: 3px 0 3px #d9d9d9 , 0 -3px 3px #d9d9d9 , 0 3px 3px #d9d9d9;left: 0;}
+.guider-fixed-left img {width: 0.43rem;margin-left: 0.3rem;}
+.guide-fixed-right img {width: 0.92rem;}
+.guide-fixed-right {right: 0.3rem;}
+@media only screen and (min-width: 540px) {
+	.back-img {width: 0.25rem;}
+	.collect-img {width: 0.45rem;margin: 0 0.5rem 0 5.16rem;}
+	.uparrow-img {width: 0.33rem;}
+	.guide-section1>h2 {font-size: 0.3rem;line-height: 0.35rem;}
+	.guide-section3 p {font-size: 18px;line-height: 25px;}
+	.guide-fixed-right , .guider-fixed-left {top: 8rem;}
+	.guide-section4 .guider-fixed-left {width: 2.5rem;height: 0.75rem;line-height: 0.75rem;}
+	.guide-fixed-right img {width: 0.8rem;}
+}
